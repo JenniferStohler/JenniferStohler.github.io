@@ -1,0 +1,57 @@
+.top {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.visible {
+  font-family: 'Calligraffitti', cursive;
+}
+
+@media screen and (max-width:600px) {
+  div.visible {
+    display: none;
+  }
+}
+
+.bg-japanpeople {
+  background-image: url("https://images.unsplash.com/photo-1478039160963-c94dcc67dd62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.tourism {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.info {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.events {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.dragon {
+  float:left;
+  padding-left: .5em;
+  padding-right: .3em;
+}
+
+.line {
+  vertical-align: center;
+}
+
+.food {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.news {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.end {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.bye {
+  font-family: 'Calligraffitti', cursive;
+}
