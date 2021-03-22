@@ -1,0 +1,76 @@
+:root {
+  background-color:darkgray;
+}
+
+.square {
+  display:block;
+  position:fixed;
+  justify-content: center;
+  margin-left: 40em;
+  margin-top:0;
+  height:10vw;
+  width:8vw;
+  background-color:black;
+}
+
+.box {
+  display:block;
+  background-color: black;
+  height:35vw;
+  width:20vw;
+  position: fixed;
+  justify-content: space-around;
+  margin-left: 34.5em;
+  margin-top:3em;
+  border-radius: 5%;
+}
+
+.redLight {
+  display:flex;
+  background-color: red;
+  height:10em;
+  width:10em;
+  border-radius: 50%;
+  margin: auto;
+  justify-content: space-around;
+  
+}
+
+.yellowLight {
+  background-color: yellow;
+  height:10em;
+  width:10em;
+  border-radius: 50%;
+  margin:auto;
+  display:flex;
+  justify-content: space-around;
+}
+
+.greenLight {
+  background-color: green;
+  height:10em;
+  width:10em;
+  margin:auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.greenLight:hover {
+  background-color: darkgreen;
+  box-shadow: 0 0 1.5em 1em yellowgreen;
+  cursor:pointer;
+}
+
+.yellowLight:hover {
+  background-color: gold;
+  box-shadow: 0 0 1.5em 1em lightyellow;
+  cursor:pointer;
+}
+
+.redLight:hover {
+  background-color: maroon;
+  box-shadow: 0 0 1.5em 1em pink;
+  cursor:pointer;
+}
