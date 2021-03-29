@@ -15,4 +15,4 @@
 
 <p>A much better way to debug your code is by implementing a breakpoint in the JavaScript Debugging pane on the console. While a breakpoint is running, developers can use the arrow keys to step into and out of functions to determine where the breakdown in the code is happening.</p>
 
-<link src="">Day 7 Morning Challenge</link>
+Day 7 Morning Challenge: https://jenniferstohler.github.io/Day7Challenge/
