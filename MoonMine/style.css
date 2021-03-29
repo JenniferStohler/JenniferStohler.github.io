@@ -1,0 +1,36 @@
+.gameName {
+  background-color: rgb(7, 7, 7);
+  font-family: 'Dancing Script', cursive;
+  font-size: 76pt;
+  color:rgb(196, 149, 243);
+  min-width: 10vw;
+  min-height: 10vh;
+}
+
+.bg-bar {
+  background-image: url("https://www.mobygames.com/images/shots/l/545818-dear-esther-windows-screenshot-the-cave-s-lighting-is-mesmerizing.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  min-width: 101vw;
+}
+
+.foot {
+  min-width: 25vw;
+  min-height: 27vh;
+  color: rgb(196, 149, 243);
+
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+}
+
+h4 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.monster:hover {
+  cursor:pointer;
+  
+}
