@@ -1,0 +1,27 @@
+.animate {
+  font-family: 'Syne Mono';
+}
+.container-fluid {
+  background-color: black;
+}
+
+h2 {
+  font-family: 'Syne Mono';
+}
+
+.rock {
+  background-color:black;
+}
+
+.paper {
+  background-color:black;
+}
+
+.scissors {
+  background-color: black;
+}
+
+.foot {
+  font-family: 'Syne Mono';
+}
+
