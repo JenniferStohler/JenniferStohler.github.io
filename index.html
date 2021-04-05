@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href = "style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-  <title>Underdark Adventure</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>K. Justice Task Log!</title>
 </head>
 
 <body>
-  <main>
-    <div class = "container-fluid">
-    <header class = "gameName row bg-dark text-center justify-content d-flex">
-      <div class = "col-md-6 p-4">
-        <h1><b>Beholder Health: <span id="health"></span></b></h1>
-      </div>
-      <div class = "col-md-6">
-        <h1><b>Gold:<span id="beholder"></span></b></h1>
-      </div>
-      </header>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light text-center">
+            <img src="https://images.unsplash.com/photo-1600081730398-99e41548d645?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" width="45" height="60" alt="" loading="lazy">
+            <h1 class="ml-5">K. JUSTICE TASK LOG!!!!</h1>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        
+        <div class="row my-3">
+            <div class="col-md-4 mt-5">
+                <form class="bg-white rounded p-3" onsubmit="app.listsController.addList(name)">
+                    <div class="form-group d-flex">
+                        <label for="moreLists">List Name</label>
+                    </div>
+                    <input type="text" name="name" id="addNewList" class="form-control" placeholder="Add List Name..."
+                    aria-describedby="helpId" required min="3" max="15">
+
+                    <div class="ml-3">
+                        <label for="color" id = "color">List Color</label>
+                        <select class="custom-select" id="color" aria-label="color select" required>
+                            <option value='bg-primary' class="text-primary">Blue</option>
+                            <option value='bg-secondary' class="text-secondary">Pink</option>
+                            <option value='bg-danger' class="text-danger">Red</option>
+                            <option value='bg-success' class="text-success">Green</option>
+                            <option value='bg-warning' class="text-warning">Orange</option>
+                        </select>
+                    </div>
+
+                    <div class="ml-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-success" title='add list'>Add List!</i></button>
+                    </div>
+                  
+                </form>
+            
+                   
+            </div>
+        </div>
+        <div class="row bg-white p-5 rounded" id="lists">
+
+        </div>
+        
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <p><small>Made by Gwen Stohler, inspired by my DnD group</small></p>
+            </div>
+        </div>
+    </footer>
+    <div id = "app">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="app/main.js" type="module"></script>
     </div>
-    
-      </div>
-    <div class = "container-fluid d-flex justify-content-center">
-    <div class="row bg-bar justify-content-center">
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-6">
-        <img src = "https://i.pinimg.com/originals/ce/48/b5/ce48b5ff66a976011a24ac8d7f722d5e.png" onclick="attack()" class="monster">
-      </div>
-      <div class="col-md-6">
-      
-      </div>
-    </div>
-  </div>
-  
- <footer class = "row foot bg-dark d-flex flex-fluid p-4 mb-10">
-   <div id="hide" class="col-md-6 d-flex">
-     <h1><b>Items:</b></h1>
-     <ul>
-     <h4>Dagger (+2 damage)/ <span id='dagger'></span></h4>
-     <h4>Snake-Headed Whip(+4 damage)/ <span id='snakeHeadedWhip'></span></h4>
-     <h4>Small Spider Army(+20 gold)/<span id='smallspiders'></span></h4>
-     <h4>Medium Spider Army(+40 gold)/<span id='mediumspiders'></span></h4>
-     </ul>
-    </div>
-   <div class="col-md-6">
-     <h1><b>Upgrades:<span id='upgrades'></span></b></h1>
-     <ul>
-     <li><button class="buy" onclick="purchaseDagger()">Buy Dagger</button></li>
-     <li><button class="buy" onclick="purchaseSnakeHeadedWhip()">Buy Snake-Headed Whip</button></li>
-     <li><button class="buy" onclick="purchaseSmallSpiders()">Buy Small Spiders</button></li>
-     <li><button class="buy" onclick="purchaseMediumSpiders()">Buy Medium Spiders</button></li>
-     </li>
-     </ul>
-   </div>
-
- </footer>
-
-
-
-
-
-
-  </main>
- <script src="app.js"></script> 
 </body>
+
 </html>
