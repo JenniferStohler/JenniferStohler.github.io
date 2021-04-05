@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>K. Justice Task Log!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light text-center">
+            <img src="https://images.unsplash.com/photo-1600081730398-99e41548d645?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" width="45" height="60" alt="" loading="lazy">
+            <h1 class="ml-5">K. JUSTICE TASK LOG!!!!</h1>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        
+        <div class="row my-3">
+            <div class="col-md-4 mt-5">
+                <form class="bg-white rounded p-3" onsubmit="app.listsController.addList(name)">
+                    <div class="form-group d-flex">
+                        <label for="moreLists">List Name</label>
+                    </div>
+                    <input type="text" name="name" id="addNewList" class="form-control" placeholder="Add List Name..."
+                    aria-describedby="helpId" required min="3" max="15">
+
+                    <div class="ml-3">
+                        <label for="color" id = "color">List Color</label>
+                        <select class="custom-select" id="color" aria-label="color select" required>
+                            <option value='bg-primary' class="text-primary">Blue</option>
+                            <option value='bg-secondary' class="text-secondary">Pink</option>
+                            <option value='bg-danger' class="text-danger">Red</option>
+                            <option value='bg-success' class="text-success">Green</option>
+                            <option value='bg-warning' class="text-warning">Orange</option>
+                        </select>
+                    </div>
+
+                    <div class="ml-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-success" title='add list'>Add List!</i></button>
+                    </div>
+                  
+                </form>
+            
+                   
+            </div>
+        </div>
+        <div class="row bg-white p-5 rounded" id="lists">
+
+        </div>
+        
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <p><small>Made by Gwen Stohler, inspired by my DnD group</small></p>
+            </div>
+        </div>
+    </footer>
+    <div id = "app">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="app/main.js" type="module"></script>
+    </div>
+</body>
+
+</html>
